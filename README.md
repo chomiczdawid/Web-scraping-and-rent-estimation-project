@@ -1,2 +1,2 @@
-# Web-scraping-and-rent-estimation-project
+# Web scraping and rent estimation project
 in progress
