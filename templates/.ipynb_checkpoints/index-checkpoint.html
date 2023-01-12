@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oszacuj cenę wynajmu w Gdańsku!</title>
+  </head>
+  <body>
+
+    <h2>Program do estymowania ceny wynajmu lokum w Gdańsku</h2>
+    <h3>Podaj parametry lokalu do oszacowania</h3>
+    
+    <form action="/form" method="POST">
+
+      <div class="mb-3">
+        <label for="input_area" class="form-label">Powierzchnia lokalu [m2]</label><br/>
+        <input type="number" id="input_area" name='input_area'>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_rooms" class="form-label">Liczba pokoi</label><br/>
+        <select id="input_rooms" name='input_rooms'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4+">4 lub więcej</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_floor" class="form-label">Piętro</label><br/>
+        <select id="input_floor" name='input_floor'>
+            <option value="<=0">Parter lub niżej</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5-10">5-10</option>
+            <option value=">10">10 lub wyższe</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_year" class="form-label">Rocznik budynku</label><br/>
+        <select id="input_year" name='input_year'>
+            <option value="<1990">starszy niż 1990</option>
+            <option value="1990-2005">1990-2005</option>
+            <option value="2005-2015">2005-2015</option>
+            <option value="2015-2020">2015-2020</option>
+            <option value=">=2020">2020 lub nowszy</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_landlord" class="form-label">Typ wynajmującego</label><br/>
+        <select id="input_landlord" name='input_landlord'>
+            <option value="osoba_prywatna">Osoba prywatna</option>
+            <option value="firma">Firma</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_local_type" class="form-label">Przeznaczenie lokalu</label><br/>
+        <select id="input_local_type" name='input_local_type'>
+            <option value="mieszkalne">Mieszkalne</option>
+            <option value="komercyjne">Komercyjne</option>
+            <option value="inne">Inne</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_furnished" class="form-label">Umeblowanie</label><br/>
+        <select id="input_furnished" name='input_furnished'>
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+        </select>
+      </div>
+      </br>
+      <div class="mb-3">
+        <label for="input_levels" class="form-label">Liczba kondygnacji</label><br/>
+        <select id="input_levels" name='input_levels'>
+            <option value="<=2">2 lub mniej</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value=">6">6 lub więcej</option>
+        </select>
+      </div>
+      </br>
+      <button type="submit" class="btn btn-primary">Oblicz</button>
+
+    </form>
+  </body>
+</html>
