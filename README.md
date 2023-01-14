@@ -24,11 +24,11 @@ Oprogramowanie składa się z trzech części:
    - **urllib.request > Request** wersja 3.9
 
 ## Prawa autorskie
-###### Autorzy
+#### Autorzy
 
 Copyright (c) 2023, Dawid Chomicz, Małgorzata Góra, Paweł Błaszkowski
 
-###### Warunki licencyjne
+#### Warunki licencyjne
 
 Oprogramowanie zostało udostępnione na licencji BSD 3-klauzulowej, o następującej treści:
 
@@ -49,7 +49,7 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 
 ## Architektura systemu
 
-##### Przebieg działania programu pobierającego informacje o ofertach wynajmu.
+#### Przebieg działania programu pobierającego informacje o ofertach wynajmu.
 1. Programista określa w systemie bazowy (wyjściowy) adres URL strony, z której mają zostać pobrane informacje oraz numer strony, od której system rozpocznie wyszukiwanie.
 2. System wysyła zapytanie do wskazanej strony wyjściowej wraz z określonymi nagłówkami żądania (headers), w tym: “User-Agent” oraz “Referer”.
 3. System pobiera kod HTML ze wskazanej strony.
@@ -67,7 +67,7 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 15. W przypadku gdy dana oferta zostanie usunięta bądź zostanie oznaczona jako nieaktualna przed próbą pobrania informacji na jej temat, system zwróci informację o błędzie i poda link do oferty, której danych nie udało się pobrać. Następnie pominie daną ofertą i przejdzie do kolejnej.
 16. Po pobraniu wszystkich informacji o wszystkich aktualnych ofertach, system zwraca wyniki zapisane w ramce danych w postaci pliku .csv zapisanego we wskazanym do tego miejscu na dysku.
 
-##### Przebieg działania programu estymującego model predykcyjny.
+#### Przebieg działania programu estymującego model predykcyjny.
 1. System akceptuje dane wejściowe w postaci pliku .csv.
 2. System konwertuje wprowadzony zbiór danych na obiekt typu ramka danych.
 3. System standaryzuje nazwy kolumn w ramce danych zmieniając nazwy na angielskie, sprowadzając wyrazy do małych liter i zastępując spacje znakiem “_”.
@@ -86,7 +86,7 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 9. System oblicza model regresji liniowej metodą najmniejszych kwadratów.
 10. System eksportuje wyliczone parametry modelu do pliku tekstowego params.txt.
 
-##### Przebieg działania systemu aplikacji webowej.
+#### Przebieg działania systemu aplikacji webowej.
 1. System wczytuje parametry modelu predykcyjnego z pliku params.txt.
 2. System generuje stronę internetową z pliku index.html w formie formularza.
 3. System akceptuje wartości wprowadzone przez formularz:
@@ -106,6 +106,136 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 9. System przekazuje wynik mnożenia jako parametr dla podstrony form.html.
 
 ## Testy
+
+Poniżej znajdują się scenariusze testów.
+
+##### TEST 1
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA  Pozostaw puste pole w oknie “Powierzchnia lokalu”.
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+
+   OR Wyświetlony jest komunikat błędu
+
+##### TEST 2
+
+a. AKCJA Uruchom stronę internetową
+
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość liczbową w oknie, gdzie parametry nie są domyślne.
+   
+   OR Pozostałe parametry wybrane pomyślnie.
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu została obliczona.
+
+
+
+##### TEST 3
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość liczbową w oknie, gdzie parametry nie są domyślne.
+   
+   OR Pozostałe parametry wybrane pomyślnie
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu została obliczona, nie został podany okres za jaki obowiązuje
+
+
+##### TEST 4
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość 100,3 w polu “Powierzchni lokalu”.
+   
+   OR Pojawia się komunikat : 
+
+c. AKCJA Wpisz liczbę całkowitą w polu “Powierzchnia lokalu”.
+   
+   OR Wartość zostaje wpisana w okno
+
+d. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu została obliczona.
+
+
+##### TEST 5
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość nie liczbową  w oknie “Powierzchnia lokalu”
+   
+   OR Pojawia się komunikat:
+
+
+c. AKCJA Wpisz dowolną wartość liczbową w oknie “Powierzchnia lokalu”
+   
+   OR Wartość została poprawnie wpisana.
+
+
+##### TEST 6
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość “0” w oknie “Powierzchnia lokalu”
+   
+   OR Wartość została poprawnie wpisana
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu została obliczona.
+
+
+
+##### TEST 7
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz wartość “1” w oknie “Powierzchnia lokalu”
+   
+   OR Wartość została poprawnie wpisana
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu została obliczona.
+
+
+
+
+##### TEST 8
+
+a. AKCJA Uruchom stronę internetową
+   
+   OR Strona załadowała się.
+
+b. AKCJA Wpisz liczbę ujemną w polu “Powierzchnia lokalu”.
+   
+   OR Wartość zostaje wpisana w okno
+
+c. AKCJA Naciśnij przycisk „Oblicz”.
+   
+   OR Cena wynajmu przyjęła wartość ujemną.
+
+
+
+
 
 
 
