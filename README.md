@@ -1,5 +1,8 @@
 # System szacowania ceny wynajmu mieszkań
 
+[Link do formularza](http://chomicz.pythonanywhere.com/)
+
+
 ## Charakterystyka oprogramowania
 
 Przedstawiony poniżej projekt dotyczy systemu szacowania miesięcznej ceny wynajmu mieszkań w Gdańsku.
@@ -234,12 +237,3 @@ c. AKCJA Naciśnij przycisk „Oblicz”.
    OR Cena wynajmu przyjęła wartość ujemną.
 
 
-
-
-
-
-
-
-
-
-[Strona](http://chomicz.pythonanywhere.com/)
