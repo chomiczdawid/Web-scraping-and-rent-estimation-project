@@ -33,9 +33,24 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 
 ## Specyfikacja wymagań
 
-| Tu | będzie | tabela |
-| --- |:---:| --- |
-| Tak | to | prawda |
+| Id | Nazwa | Opis | Priorytet <br />[1 - wymagane, 2 - przydatne, 3 – opcjonalne] | Kategoria  
+|:---:|:---:|:---:|:---:|:---:
+|1|Ustawienie parametrów przez użytkownika|Użytkownik może wskazać wartości poszczególnych parametrów lokalu|1|funkcjonalne  
+|2|Parametry kategoryczne w formie listy rozwijanej|Użytkownik może wybrać warianty parametrów kategorycznych jako jeden z elementów listy rozwijanej|2|funkcjonalne
+|3|Podanie powierzchni jako liczbę całkowitą|Użytkownik może wprowadzić parametr „Powierzchnia lokalu” do pola wejściowego jako dowolną liczbę całkowitą dodatnią|1|funkcjonalne
+|4|Zwracanie komunikatów użytkownikowi|W przypadku wpisania niepoprawnej wartości w polu „Powierzchnia lokalu” system powinien zwracać odpowiedni komunikat|2|funkcjonalne
+|5|Ustawienie wybranych parametrów przez użytkownika|Użytkownik ma możliwość uzupełnienia wybranych parametrów, przy pozostawieniu pozostałych jako puste|3|funkcjonalne
+|6|Dokonanie obliczeń po kliknięciu przycisku|Po kliknięciu przycisku „Oblicz” system powinien wykonać oszacowanie ceny wynajmu na podstawie wprowadzonych przez użytkownika parametrów|1|funkcjonalne
+|7|Zwrócenie wyniku po kliknięciu przycisku|Załadowana po kliknięciu przycisku „Oblicz” podstrona powinna pokazywać wynik estymacji w formie liczby zmiennoprzecinkowej z dokładnością do części setnych i walutą, w jakiej została wyliczona|1|funkcjonalne
+|8|Wybór lokalizacji|Użytkownik może wybrać dowolne miasto, dla którego chce mieć zwrócony wynik|3|funkcjonalne
+|9|Wielokrotny wybór dla parametrów|Użytkownik może zaznaczyć kilka wariantów danego parametru jednocześnie|3|funkcjonalne
+|10|Czas trwania obliczeń|Podstrona powinna się ładować w ciągu maksymalnie 10. sekund od kliknięcia przycisku „Oblicz”|2|funkcjonalne
+|11|Dostępność strony|Aplikacja ma być dostępna na serwerze całą dobę każdego dnia w okresie funkcjonowania (3 mies.)|1|niefunkcjonalne
+|12|Ograniczenie liczby użytkowników|Z aplikacji jednocześnie może korzystać maksymalnie 10 użytkowników|2|niefunkcjonalne
+|13|Zgłaszanie problemów z działaniem strony|Użytkownicy mogą zgłaszać problemy z funkcjonowaniem aplikacji na podany na stronie adres mailowy support@example.com|3|niefunkcjonalne
+|14|Wyświetlane elementy aplikacji|Aplikacja wyświetla takie elementy jak: tekst, nagłówki, pola wyboru z listą rozwijaną, numeryczne pole wejściowe, przycisk zatwierdzający|1|niefunkcjonalne
+|15|Oprawa graficzna|Aplikacja jest oprawiona nowoczesną szatą graficzną|3|niefunkcjonalne
+|16|Responsywność|Aplikacja jest responsywna i dostosowuje się do wielkości okna przeglądarki|2|niefunkcjonalne
 
 
 ## Architektura systemu
