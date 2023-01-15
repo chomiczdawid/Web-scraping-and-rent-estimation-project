@@ -53,6 +53,7 @@ Treść oryginalnej licencji oraz zastrzeżenia w wersji angielskiej można znal
 |16|Responsywność|Aplikacja jest responsywna i dostosowuje się do wielkości okna przeglądarki|2|niefunkcjonalne
 
 
+
 ## Architektura systemu
 
 ### Wykorzystane technologie
@@ -136,130 +137,145 @@ Poniżej znajdują się scenariusze testów.
 
 ### TEST 1
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA  Pozostaw puste pole w oknie “Powierzchnia lokalu”.
+2. **AKCJA**  Pozostaw puste pole w oknie “Powierzchnia lokalu”.
 
-c. AKCJA Naciśnij przycisk „Oblicz”.
+3. **AKCJA** Naciśnij przycisk „Oblicz”.
 
-   OR Wyświetlony jest komunikat błędu
+   **OR** Wyświetlony jest komunikat błędu
+   
+   ![error_t1](https://user-images.githubusercontent.com/119015653/212536208-65348f9f-b581-4ccd-8975-678956ab691f.jpg)
+   
+##   
 
 ### TEST 2
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
 
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wybierz domyślne wartości parametrów.
+2. **AKCJA** Wybierz domyślne wartości parametrów.
    
-   OR Parametry wybrane pomyślnie.
+   **OR** Parametry wybrane pomyślnie.
 
-c. AKCJA Naciśnij przycisk „Oblicz”.
+3. **AKCJA** Naciśnij przycisk „Oblicz”.
    
-   OR Cena wynajmu została obliczona.
+   **OR** Cena wynajmu została obliczona.
+   
+   ![error_t2](https://user-images.githubusercontent.com/119015653/212536333-37527763-b8c1-4438-9918-f95c858cc4db.jpg)
 
-
+##
 
 ### TEST 3
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz dowolną wartość liczbową mniejszą niż 5 w polu “Powierzchnia lokalu”, reszta parametrów warianty domyślne.
+2. **AKCJA** Wpisz dowolną wartość liczbową mniejszą niż 5 w polu “Powierzchnia lokalu”, reszta parametrów warianty domyślne.
    
-   OR Pozostałe parametry wybrane pomyślnie
+   **OR** Pozostałe parametry wybrane pomyślnie
 
-c. AKCJA Naciśnij przycisk „Oblicz”.
+3. **AKCJA** Naciśnij przycisk „Oblicz”.
    
-   OR Pojawia się komunikat błędu.
+   **OR** Pojawia się komunikat błędu.
+   
+   ![error_t3](https://user-images.githubusercontent.com/119015653/212536352-64b9a75c-6801-475f-bca2-86c587d1edb9.jpg)
 
+##
 
 ### TEST 4
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz wartość 100,3 w polu “Powierzchnia lokalu”.
+2. **AKCJA** Wpisz wartość 100,3 w polu “Powierzchnia lokalu”.
    
-   OR Pojawia się komunikat:
+   **OR** Pojawia się komunikat:
    
+   ![error_t4](https://user-images.githubusercontent.com/119015653/212536359-bf70c7b7-0009-445b-bcb8-1e009236d52b.jpg)
+   
+3. **AKCJA** Wpisz liczbę całkowitą w polu “Powierzchnia lokalu”.
+   
+   **OR** Wartość zostaje wpisana w okno.
 
-c. AKCJA Wpisz liczbę całkowitą w polu “Powierzchnia lokalu”.
+4. **AKCJA** Naciśnij przycisk „Oblicz”.
    
-   OR Wartość zostaje wpisana w okno
-
-d. AKCJA Naciśnij przycisk „Oblicz”.
+   **OR** Cena wynajmu została obliczona.
    
-   OR Cena wynajmu została obliczona.
-
+##  
 
 ### TEST 5
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz wartość nie liczbową w oknie “Powierzchnia lokalu”
+2. **AKCJA** Wpisz wartość nie liczbową w oknie “Powierzchnia lokalu”
    
-   OR Pojawia się komunikat:
-
-
-c. AKCJA Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   **OR** Pojawia się komunikat:
    
-   OR Wartość została poprawnie wpisana.
+   ![error_t5](https://user-images.githubusercontent.com/119015653/212536423-e31da214-37a4-42db-9509-b01d50c136b2.jpg)
 
+3. **AKCJA** Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   
+   **OR** Wartość została poprawnie wpisana.
+
+##
 
 ### TEST 6
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz wartość “0” w oknie “Powierzchnia lokalu”
+2. **AKCJA** Wpisz wartość “0” w oknie “Powierzchnia lokalu”
    
-   OR Pojawia się komunikat:
-
-c. AKCJA Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   **OR** Pojawia się komunikat:
    
-   OR Wartość została poprawnie wpisana.
+   ![error_t6](https://user-images.githubusercontent.com/119015653/212536437-bcd92484-4511-4e46-9814-eeb9a60778b6.jpg)
 
+3. **AKCJA** Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   
+   **OR** Wartość została poprawnie wpisana.
 
+##
 
 ### TEST 7
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz wartość “1” w oknie “Powierzchnia lokalu”
+2. **AKCJA** Wpisz wartość “1” w oknie “Powierzchnia lokalu”
    
-   OR Pojawia się komunikat:
+   **OR** Pojawia się komunikat:
    
+   ![error_t7](https://user-images.githubusercontent.com/119015653/212536445-85aaa86f-ec41-40fe-a8e9-4d26be46cc10.jpg)
 
-c. AKCJA Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   3. **AKCJA** Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
    
-   OR Wartość została poprawnie wpisana.
+   **OR** Wartość została poprawnie wpisana.
 
-
-
+##
 
 ### TEST 8
 
-a. AKCJA Uruchom stronę internetową
+1. **AKCJA** Uruchom stronę internetową
    
-   OR Strona załadowała się.
+   **OR** Strona załadowała się.
 
-b. AKCJA Wpisz liczbę ujemną w polu “Powierzchnia lokalu”.
+2. **AKCJA** Wpisz liczbę ujemną w polu “Powierzchnia lokalu”.
    
-   OR Pojawia się komunikat:
+   **OR** Pojawia się komunikat:
    
-
-c. AKCJA Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   ![error_t8](https://user-images.githubusercontent.com/119015653/212536454-e335fc42-ad5d-4cb2-ac98-7e3e491ebd71.jpg)
    
-   OR Wartość została poprawnie wpisana.
-
+3. **AKCJA** Wpisz dowolną wartość liczbową większą lub równą 5 w oknie “Powierzchnia lokalu”
+   
+   **OR** Wartość została poprawnie wpisana.
 
